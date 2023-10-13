@@ -1,33 +1,32 @@
-CREATE TABLE `utilisateur` (
+CREATE TABLE `utilisateurs` (
 	`id_utilisateur` INT NOT NULL AUTO_INCREMENT,
-	`nom` varchar(200) NOT NULL,
-	`prenom` varchar(200) NOT NULL,
-	`email` varchar(200) NOT NULL,
-	`mdp` varchar(200) NOT NULL,
-	`age` int NOT NULL,
+	`nom` VARCHAR(200) NOT NULL,
+	`prenom` VARCHAR(200) NOT NULL,
+	`email` VARCHAR(200) NOT NULL,
+	`mdp` VARCHAR(200) NOT NULL,
+	`age` INT NOT NULL,
 	`date_inscription` DATE NOT NULL,
 	PRIMARY KEY (`id_utilisateur`)
 );
 
-CREATE TABLE `glycemie` (
+CREATE TABLE `glycemia` (
 	`id_glycemie` INT NOT NULL AUTO_INCREMENT,
 	`id_utilisateur` INT NOT NULL,
-	`niveau_glycemie` DECIMAL NOT NULL,
-	`date_et_heur_de_mesure` DATETIME NOT NULL,
+	`niveau_glycemie` DECIMAL(10, 2) NOT NULL,
+	`date_et_heure_de_mesure` DATETIME NOT NULL,
 	`commentaire` TEXT NOT NULL,
-	PRIMARY KEY (`id_glycemie`)
+	PRIMARY KEY (`id_glycemie`),
+	FOREIGN KEY (`id_utilisateur`) REFERENCES `utilisateurs`(`id_utilisateur`)
 );
 
-CREATE TABLE `article` (
+CREATE TABLE `articles` (
 	`id_article` INT NOT NULL AUTO_INCREMENT,
-	`titre` varchar(200) NOT NULL,
-	`img` varchar(500) NOT NULL,
+	`titre` VARCHAR(200) NOT NULL,
+	`img` VARCHAR(500) NOT NULL,
 	`contenu` TEXT NOT NULL,
 	`date_publication` DATETIME NOT NULL,
 	PRIMARY KEY (`id_article`)
 );
-
-ALTER TABLE `glycémie` ADD CONSTRAINT `glycémie_fk0` FOREIGN KEY (`id_utilisateur`) REFERENCES `utilisateur`(`id_utilisateur`);
 
 
 

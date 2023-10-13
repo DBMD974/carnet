@@ -1,3 +1,4 @@
+<?php include ('Maconnexion.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 
