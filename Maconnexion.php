@@ -299,6 +299,7 @@ use MaConnexion as GlobalMaConnexion;
 
 
  $test = new MaConnexion("carnet","","root","localhost");
+ $test = new MaConnexion("sc3nuxz4136_lafosse-damien.carnet","","root","localhost");
  
 
 ?>
