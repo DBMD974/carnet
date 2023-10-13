@@ -1,0 +1,132 @@
+body{
+    margin: 0 8%;
+}
+
+/* style pour ma navbar */
+.navbar{
+    margin-bottom: 10%;
+    font-size: x-large;
+}
+
+
+/* Style pour la div contenant la vidéo */
+.video-container {
+    text-align: center; /* Centre horizontalement le contenu */
+    max-width: 800px; /* Largeur maximale de la div */
+    margin: 0 auto; /* Centre la div horizontalement */
+    border: 1px solid #69a5e5; /* Bordure pour le cadre de la vidéo */
+    padding: 10px; /* Espace interne pour la bordure */
+}
+
+/* Style pour la vidéo */
+.video-container video {
+    max-width: 100%; 
+}
+
+
+
+/*  mon tableau glycemique */
+
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 2px solid #ccc;
+    background: linear-gradient(to top, #ffffff, #007BFF);
+    padding: 10px;
+    text-align: center;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 5px;
+}
+
+.message {
+    margin-top: 20px;
+}
+
+textarea {
+    width: 100%;
+}
+
+/* Style pour la boîte de gradient */
+.gradient-box {
+    background: linear-gradient(to top, #ffffff, #4b9cf3);
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 10%;
+}
+
+.gradient-box p {
+    margin: 0;
+}
+
+.gradient-box hr {
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 10px 0;
+}
+
+.msg{
+    text-align: center;
+    text-align: justify;
+    margin: 0 25%;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Style pour le footer */
+.footer {
+    background-color: #333; /* Couleur de fond du footer */
+    color: #fff; /* Couleur du texte du footer */
+    padding: 20px 0; /* Espacement intérieur du footer */
+    text-align: center; /* Centrer le texte */
+    margin-top: 10%;
+}
+
