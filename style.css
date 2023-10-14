@@ -9,7 +9,7 @@ body{
 }
 
 
-/* Style pour la div contenant la vidéo */
+/* Style pour la div vidéo */
 .video-container {
     text-align: center; /* Centre horizontalement le contenu */
     max-width: 800px; /* Largeur maximale de la div */
@@ -18,7 +18,7 @@ body{
     padding: 10px; /* Espace interne pour la bordure */
 }
 
-/* Style pour la vidéo */
+/* Style vidéo */
 .video-container video {
     max-width: 100%; 
 }
@@ -65,7 +65,7 @@ textarea {
     width: 100%;
 }
 
-/* Style pour la boîte de gradient */
+/* Style pour la boîte*/
 .gradient-box {
     background: linear-gradient(to top, #ffffff, #4b9cf3);
     padding: 10px;
@@ -91,6 +91,29 @@ textarea {
     color: #fff;
 }
 
+
+
+/* .column {
+    display: inline-block;
+    width: 30%; 
+    vertical-align: top;
+    margin: 10px;
+    padding: 10px;
+    background: linear-gradient(to top, #ffffff, #4b9cf3);
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.column p {
+    margin: 0;
+}
+
+.column hr {
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 10px 0;
+} */
 
 
 
