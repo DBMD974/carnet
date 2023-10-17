@@ -13,7 +13,7 @@
 
 <body>
     <!-- <h2>Connexion</h2> -->
-    <form action="process_login.php" method="post">
+    <form action="config-login.php" method="post">
         <label for="email">Email :</label>
         <input type="email" id="email" name="email" required><br>
 

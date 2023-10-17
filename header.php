@@ -12,7 +12,7 @@
             <!-- Boutons à droite -->
             <div class="d-flex">
    <a href="inscription.php"> <button class="btn btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#inscriptionModal">Inscription</button></a>
-    <a href="conexion.php"></a><button class="btn btn-primary">Connexion</button>
+    <a href="conexion.php"><button class="btn btn-primary">Connexion</button></a>
 </div>
 
         </div>
