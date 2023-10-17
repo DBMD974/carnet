@@ -29,7 +29,7 @@ body{
 
 
 .container {
-    max-width: 800px;
+    max-width: 700px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -66,56 +66,111 @@ textarea {
 }
 
 /* Style pour la boîte*/
-.gradient-box {
-    background: linear-gradient(to top, #ffffff, #4b9cf3);
-    padding: 10px;
-    text-align: center;
-    border: 1px solid #ccc;
-    border-radius: 10%;
+.gradient-box1 {
+    display: flex;
+
+    align-items: center;
 }
 
-.gradient-box p {
-    margin: 0;
+.gradient-box1 p {
+    margin: 5px 0;
+    flex-direction: column;
 }
 
-.gradient-box hr {
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 10px 0;
+.gradient-box1 p:not(:last-child) {
+    border-right: 2px solid #ccc; /* Ligne verticale entre les phrases */
 }
 
-.msg{
-    text-align: center;
-    text-align: justify;
-    margin: 0 25%;
-    color: #fff;
+/* 2 eme boite */
+/* .gradient-box2 {
+    display: flex;
+
+    align-items: center;
+}
+
+.gradient-box2 p {
+    margin: 5px 0;
+    flex-direction: column;
+}
+
+.gradient-box2 p:not(:last-child) {
+    border-right: 2px solid #ccc; /* Ligne verticale entre les phrases */
+ */
+
+/* 3 eme boite */
+.gradient-box1 {
+    display: flex;
+
+    align-items: center;
+}
+
+.gradient-box1 p {
+    margin: 5px 0;
+    flex-direction: column;
+}
+
+.gradient-box1 p:not(:last-child) {
+    border-right: 2px solid #ccc; /* Ligne verticale entre les phrases */
 }
 
 
 
-/* .column {
-    display: inline-block;
-    width: 30%; 
-    vertical-align: top;
-    margin: 10px;
-    padding: 10px;
-    background: linear-gradient(to top, #ffffff, #4b9cf3);
+
+
+
+/* Style du formulaire d'inscription */
+body .inscription{
+    background-color: #007BFF;
+}
+
+
+form {
+    max-width: 400px;
+    margin: 5% auto;
+    padding: 20px;
     border: 1px solid #ccc;
     border-radius: 10px;
-    text-align: center;
+    background-color: #f8f8f8;
 }
 
-.column p {
-    margin: 0;
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
 }
 
-.column hr {
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 10px 0;
-} */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
 
+input[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+}
 
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Style pour les messages d'erreur (le cas échéant) */
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
 
 
 
