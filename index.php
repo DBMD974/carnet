@@ -1,4 +1,5 @@
-<?php include ('Maconnexion.php'); ?>
+
+<?php include('Maconnexion.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,16 +20,16 @@
 
 
 
-    <!-- <div class="video-container">
+    <div class="video-container">
         <video controls>
             <source src="img&video\C'est quoi le diabète .mp4" type="video/mp4">
             <p>Votre navigateur ne prend pas en charge la vidéo HTML5.</p>
         </video>
-    </div> -->
+    </div>
 
-    <!-- <div class="diabetes-info">
+    <div class="diabetes-info">
 
-      
+
 
         <div class="info-text">
             <h1>Le Diabète :</h1>
@@ -50,7 +51,7 @@
 
 
         </div>
-    </div>  -->
+    </div>
 
     <?php include('tab.php'); ?>
 

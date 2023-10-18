@@ -10,12 +10,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $mdp = $_POST['mdp'];
     $age = $_POST['age'];
 
+     // Hacher le mot de passe
+     $mdpHash = password_hash($mdp, PASSWORD_DEFAULT);
+
     // Instancier la classe de connexion
     $maConnexion = new MaConnexion("carnet", "", "root", "localhost");
     // $maConnexion = new MaConnexion("sc3nuxz4136_lafosse-damien.carnet", "OM-RUN_DPS_DWWM_AFC_Avril23", "sc3nuxz4136", "localhost");
 
-    // Créer l'utilisateur
-    $userId = $maConnexion->createUser($prenom, $nom, $email, $mdp, $age);
+    // Créer l'utilisateur avec le mot de passe haché
+    $userId = $maConnexion->createUser($prenom, $nom, $email, $mdpHash, $age);
 
     // Vérifier si l'inscription a réussi
     if ($userId !== false) {
