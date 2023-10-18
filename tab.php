@@ -46,19 +46,23 @@
                 <input type="text" name="lundiMatin" placeholder="Glycémie du matin">
                 <input type="text" name="lundiMatinInsuline" placeholder="Insuline du petit déjeuner">
                 <input type="text" name="lundiMatinApres" placeholder="Glycémie après le petit déjeuner (2h après)">
+                <button type="submit">Enter</button>
             </td>
             <td class="gradient-box">
                 <input type="text" name="lundiMidi" placeholder="Glycémie du midi">
                 <input type="text" name="lundiMidiInsuline" placeholder="Insuline du déjeuner">
                 <input type="text" name="lundiMidiApres" placeholder="Glycémie après le déjeuner (2h après)">
+                <button type="submit">Enter</button>
             </td>
             <td class="gradient-box">
                 <input type="text" name="lundiSoiree" placeholder="Glycémie du soir">
                 <input type="text" name="lundiSoireeInsuline" placeholder="Insuline du dîner">
                 <input type="text" name="lundiSoireeApres" placeholder="Glycémie après le dîner (2h après)">
+                <button type="submit">Enter</button>
             </td>
             <td>
                 <input type="text" name="lundiEvenements" placeholder="Evenements exceptionnels">
+                <button type="submit">Enter</button>
             </td>
         </tr>
 
