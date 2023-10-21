@@ -29,12 +29,19 @@
     <label for="age">Âge :</label>
     <input type="number" id="age" name="age" required><br>
 
-    <!-- <label for="date_inscription">Date d'inscription :</label>
-    <input type="date" id="date_inscription" name="date_inscription" required><br> -->
+    <label for="role">Rôle :</label>
+    <select id="role" name="role" required>
+        <option value="utilisateur">Utilisateur</option>
+        <option value="admin">Admin</option>
+    </select><br>
+
+    <label for="date_inscription">Date d'inscription :</label>
+    <input type="date" id="date_inscription" name="date_inscription" required><br>
 
     <input type="submit" class="btn btn-primary" value="Inscription">
 </form>
-</div>
+
+
 
 <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>

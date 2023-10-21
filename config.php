@@ -9,24 +9,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'];
     $mdp = $_POST['mdp'];
     $age = $_POST['age'];
+    $role = $_POST['role'];
+    $date_inscription = $_POST['date_inscription'];
 
-     // Hacher le mot de passe
-     $mdpHash = password_hash($mdp, PASSWORD_DEFAULT);
+    try {
+        // Instancier la classe de connexion
+        $maConnexion = new MaConnexion("carnet", "", "root", "localhost");
 
-    // Instancier la classe de connexion
-    $maConnexion = new MaConnexion("carnet", "", "root", "localhost");
-    // $maConnexion = new MaConnexion("sc3nuxz4136_lafosse-damien.carnet", "OM-RUN_DPS_DWWM_AFC_Avril23", "sc3nuxz4136", "localhost");
+        // Hasher le mot de passe
+        $mdpHash = password_hash($mdp, PASSWORD_DEFAULT);
 
-    // Créer l'utilisateur avec le mot de passe haché
-    $userId = $maConnexion->createUser($prenom, $nom, $email, $mdpHash, $age);
+        // Créer l'utilisateur
+        $userId = $maConnexion->createUser($prenom, $nom, $email, $mdpHash, $age, $role, $date_inscription);
 
-    // Vérifier si l'inscription a réussi
-    if ($userId !== false) {
-        // Rediriger vers la page de confirmation (par exemple, accueil.php)
-        header('Location: header.php');
-        exit();
-    } else {
-        echo "L'inscription a échoué. Veuillez réessayer.";
+        if ($userId !== false) {
+            echo "Inscription réussie !";
+        } else {
+            echo "L'inscription a échoué.";
+        }
+    } catch (PDOException $e) {
+        echo "Erreur PDO : " . $e->getMessage();
     }
 }
 ?>

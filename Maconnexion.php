@@ -27,16 +27,17 @@ class MaConnexion
 
 
 
-    public function createUser($firstName, $lastName, $email, $password, $age) {
+    public function createUser($firstName, $lastName, $email, $password, $age, $role, $dateInscription) {
         try {
-            $query = "INSERT INTO utilisateurs (nom, prenom, email, mot_de_passe, age) VALUES (?, ?, ?, ?, ?)";
+            $query = "INSERT INTO utilisateurs (nom, prenom, email, mot_de_passe, age, id_role, date_inscription) VALUES (?, ?, ?, ?, ?, ?, ?)";
             $stmt = $this->connexionPDO->prepare($query);
-            $stmt->execute([$lastName, $firstName, $email, $password, $age]);
+            $stmt->execute([$lastName, $firstName, $email, $password, $age, $role, $dateInscription]);
             return $this->connexionPDO->lastInsertId();
         } catch (PDOException $e) {
             return false;
         }
     }
+    
 
 
 

@@ -20,6 +20,12 @@
         <label for="mdp">Mot de passe :</label>
         <input type="password" id="mdp" name="mdp" required><br>
 
+        <label for="role">Rôle :</label>
+    <select id="role" name="role" required>
+        <option value="utilisateur">Utilisateur</option>
+        <option value="admin">Admin</option>
+    </select><br>
+
         <input type="submit" value="Connexion">
     </form>
 
