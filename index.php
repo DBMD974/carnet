@@ -1,5 +1,38 @@
+<?php
+session_start(); // Démarrez la session sur la page index
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Traitement de l'inscription ici
+    // ...
+
+    // Une fois l'inscription réussie, définissez le rôle de l'utilisateur dans la session
+    $_SESSION['role'] = $_POST['role'];
+}
+
+if (isset($_SESSION['role'])) {
+    $role = $_SESSION['role'];
+
+    // Afficher le contenu en fonction du rôle de l'utilisateur
+    if ($role === 'abonné') {
+        // Afficher le contenu pour les abonnés
+        include('abonne.php');
+    } elseif ($role === 'administrateur') {
+        // Afficher le contenu pour les administrateurs
+        include('administrateur.php');
+    } else {
+        // Afficher le contenu par défaut pour les autres rôles ou les visiteurs
+        // ...
+    }
+} else {
+    // Si l'utilisateur n'a pas de rôle défini, affichez le formulaire d'inscription
+    // ...
+}
+?>
+
 
 <?php include('Maconnexion.php'); ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -52,30 +85,6 @@
 
         </div>
     </div>
-
-
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <?php include('tab.php'); ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

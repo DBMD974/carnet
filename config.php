@@ -24,6 +24,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if ($userId !== false) {
             echo "Inscription réussie !";
+
+            // Rediriger l'utilisateur en fonction de son rôle
+            if ($role === 'abonné') {
+                // Rediriger vers la page des abonnés
+                header('Location: abonne.php');
+            } elseif ($role === 'administrateur') {
+                // Rediriger vers la page des administrateurs
+                header('Location: administrateur.php');
+            } else {
+                // Rediriger vers une page par défaut pour les visiteurs
+                header('Location: index.php');
+            }
+
         } else {
             echo "L'inscription a échoué.";
         }
