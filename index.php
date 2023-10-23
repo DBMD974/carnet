@@ -90,6 +90,40 @@ if (isset($_SESSION['role'])) {
 
 
 
+
+    <?php
+$serveur = "localhost"; // Adresse du serveur MySQL
+$utilisateur = "root"; // Nom d'utilisateur de la base de données
+$motDePasse = ""; // Mot de passe de la base de données
+$baseDeDonnees = "carnet"; // Nom de la base de données
+
+try {
+    // Créer une connexion PDO à la base de données
+    $connexion = new PDO("mysql:host=$serveur;dbname=$baseDeDonnees", $utilisateur, $motDePasse);
+
+    // Définir l'attribut PDO pour générer des exceptions en cas d'erreur
+    $connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    echo "La connexion à la base de données a réussi !";
+} catch (PDOException $e) {
+    echo "Erreur de connexion à la base de données : " . $e->getMessage();
+}
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <?php include('footer.php'); ?>
 
     <script src="script.js"></script>
