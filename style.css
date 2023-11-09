@@ -1,91 +1,111 @@
-body{
-    margin: 0 8%;
-}
+
 
 /* style pour ma navbar */
-.navbar{
-    margin-bottom: 10%;
-    font-size: x-large;
-}
-
-
-/* Style pour la div vidéo */
-.video-container {
-    text-align: center; /* Centre horizontalement le contenu */
-    max-width: 800px; /* Largeur maximale de la div */
-    margin: 0 auto; /* Centre la div horizontalement */
-    border: 1px solid #69a5e5; /* Bordure pour le cadre de la vidéo */
-    padding: 10px; /* Espace interne pour la bordure */
-}
-
-/* Style vidéo */
-.video-container video {
-    max-width: 100%; 
-}
-
-
-
-/*  mon tableau glycemique */
-
-
-.container {
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-table {
-    width: 80%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    margin-left: 120px;
-}
-
-table, th, td {
-    border: 2px solid #ccc;
-    background: linear-gradient(to top, #ffffff, #007BFF);
-    padding: 10px;
-    text-align: center;
-}
-
-th, td {
-    padding: 10px;
-    text-align: center;
-}
-
-input[type="text"] {
-    width: 30%;
-    padding: 5px;
-}
-
-.message {
-    margin-top: 20px;
-}
-
-textarea {
+/* Style pour le header */
+header {
+    background-color: #858585; /* Couleur de fond du header */
+    color: #fff; /* Couleur du texte dans le header */
+    padding: 20px 0; /* Espacement intérieur du header */
+    text-align: center; /* Centrer le texte */
     width: 100%;
+    /* Ajouter une ombre légère pour un effet de profondeur */
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0);
 }
 
-/* Style pour la boîte*/
-.gradient-box1 {
-    display: flex;
-
-    align-items: center;
+/* Style pour la navigation */
+.navbar {
+    background-color: transparent; /* Fond de la barre de navigation transparent */
+    border: none; /* Supprimer les bordures */
 }
 
-.gradient-box1 p {
-    margin: 5px 0;
-    flex-direction: column;
+.navbar-brand {
+    padding: 0; /* Supprimer la marge interne du logo */
 }
 
-.gradient-box1 p:not(:last-child) {
-    border-right: 2px solid #ccc; /* Ligne verticale entre les phrases */
+.navbar-brand img {
+    max-width: 100px; /* Largeur maximale du logo */
 }
 
- 
+.navbar-text {
+    font-size: 24px; /* Taille du texte du titre */
+    font-weight: bold; /* Texte en gras */
+    margin-right: 20px; /* Espacement à droite */
+}
+
+/* Style pour les boutons Inscription et Connexion */
+.nav-right .btn {
+    font-size: 18px; /* Taille du texte des boutons */
+    margin: 0 10px; /* Espacement entre les boutons */
+}
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Style pour la vidéo */
+/* .video-container {
+    border: 2px solid #007BFF;
+} */
+
+.video-container video {
+    width: 300%;
+    height: 100%;
+    margin: 80px 75%;
+    border: 2px solid #007BFF;
+
+}
+
+/* Style pour le titre */
+.diabetes-info h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #003cff; /* Couleur du texte du titre */
+    margin: 40px 8%;
+    text-align: center;
+    text-decoration: underline;
+}
+
+/* Style pour le texte d'information */
+.diabetes-info h4 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #000000; /* Couleur du texte du contenu */
+    margin: 10px 8%;
+}
+
+.diabetes-info p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 1.5; /* Espacement entre les lignes du texte */
+    margin: 10px 8%;
+}
+
+.diabetes-info h3 {
+    font-size: 24px;
+    margin-top: 20px;
+    color: #003cff; /* Couleur du texte des sous-titres */
+    margin: 10px 8%;
+    text-align: justify;
+}
 
 
 
@@ -191,11 +211,61 @@ input[type="submit"]:hover {
 
 
 /* Style pour le footer */
+/* Style pour le formulaire de contact */
+.contact-form {
+    background-color: #f5f5f5; /* Couleur de fond du formulaire */
+    border: 1px solid #ddd; /* Bordure autour du formulaire */
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 500px; /* Largeur maximale du formulaire */
+    text-align: left; /* Alignement du texte dans le formulaire */
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333; /* Couleur du texte des étiquettes */
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc; /* Bordure des champs de saisie */
+    border-radius: 4px;
+}
+
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc; /* Bordure de la zone de texte */
+    border-radius: 4px;
+}
+
+.contact-form button {
+    background-color: #333; /* Couleur de fond du bouton */
+    color: #fff; /* Couleur du texte du bouton */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #555; /* Couleur de fond du bouton au survol */
+}
+
+/* Style pour le footer */
 .footer {
     background-color: #333; /* Couleur de fond du footer */
     color: #fff; /* Couleur du texte du footer */
     padding: 20px 0; /* Espacement intérieur du footer */
     text-align: center; /* Centrer le texte */
     margin-top: 10%;
+    width: 100%;
 }
 

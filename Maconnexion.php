@@ -141,6 +141,148 @@ public function deleteGlycemiaRecord($recordId) {
 }
 
 
+
+// parti CRUD pour Articles
+// Créer un nouvel article  : 
+public function createArticle($title, $image, $content, $datePublication) {
+    try {
+        $query = "INSERT INTO articles (titre, img, contenu, date_publication) VALUES (?, ?, ?, ?)";
+        $stmt = $this->connexionPDO->prepare($query);
+        $stmt->execute([$title, $image, $content, $datePublication]);
+        return $this->connexionPDO->lastInsertId();
+    } catch (PDOException $e) {
+        return false;
+    }
+}
+
+
+
+
+// articles Par titre : 
+public function getArticleByTitle($title) {
+    try {
+        $query = "SELECT * FROM articles WHERE titre = ?";
+        $stmt = $this->connexionPDO->prepare($query);
+        $stmt->execute([$title]);
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    } catch (PDOException $e) {
+        return null;
+    }
+}
+
+
+
+
+// articles Par ID : 
+public function getArticleById($id) {
+    try {
+        $query = "SELECT * FROM articles WHERE id = ?";
+        $stmt = $this->connexionPDO->prepare($query);
+        $stmt->execute([$id]);
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    } catch (PDOException $e) {
+        return null;
+    }
+}
+
+
+
+// mis a jour articles
+public function updateArticle($id, $title, $image, $content, $datePublication) {
+    try {
+        $query = "UPDATE articles SET titre = ?, img = ?, contenu = ?, date_publication = ? WHERE id = ?";
+        $stmt = $this->connexionPDO->prepare($query);
+        $stmt->execute([$title, $image, $content, $datePublication, $id]);
+        return true;
+    } catch (PDOException $e) {
+        return false;
+    }
+}
+
+
+
+// supression d'article
+public function deleteArticle($id) {
+    try {
+        $query = "DELETE FROM articles WHERE id = ?";
+        $stmt = $this->connexionPDO->prepare($query);
+        $stmt->execute([$id]);
+        return true;
+    } catch (PDOException $e) {
+        return false;
+    }
+}
+
+
+
+
+// Créer un nouveau message article 
+public function createContact($nom, $email, $sujet, $message, $idUtilisateur) {
+    try {
+        $query = "INSERT INTO contacts (nom, email, sujet, message, id_utilisateur) VALUES (?, ?, ?, ?, ?)";
+        $stmt = $this->connexionPDO->prepare($query);
+        $stmt->execute([$nom, $email, $sujet, $message, $idUtilisateur]);
+        return $this->connexionPDO->lastInsertId();
+    } catch (PDOException $e) {
+        return false;
+    }
+}
+
+
+// Lire un contact par ID  :
+public function getContactById($id) {
+    try {
+        $query = "SELECT * FROM contacts WHERE id_contact = ?";
+        $stmt = $this->connexionPDO->prepare($query);
+        $stmt->execute([$id]);
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    } catch (PDOException $e) {
+        return null;
+    }
+}
+
+
+// Mettre à jour un contact  : 
+public function updateContact($id, $nom, $email, $sujet, $message, $idUtilisateur) {
+    try {
+        $query = "UPDATE contacts SET nom = ?, email = ?, sujet = ?, message = ?, id_utilisateur = ? WHERE id_contact = ?";
+        $stmt = $this->connexionPDO->prepare($query);
+        $stmt->execute([$nom, $email, $sujet, $message, $idUtilisateur, $id]);
+        return true;
+    } catch (PDOException $e) {
+        return false;
+    }
+}
+
+
+// Supprimer un contact  : 
+public function deleteContact($id) {
+    try {
+        $query = "DELETE FROM contacts WHERE id_contact = ?";
+        $stmt = $this->connexionPDO->prepare($query);
+        $stmt->execute([$id]);
+        return true;
+    } catch (PDOException $e) {
+        return false;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 public function close()
 {
     // Fermeture de la connexion à la base de données
